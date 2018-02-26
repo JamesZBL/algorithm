@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  */
-package me.zbl.straightinsert;
+package me.zbl.shellssort;
 
 import com.google.common.primitives.Ints;
 
@@ -26,7 +26,7 @@ public class App {
 
   public static void main(String[] args) {
     int[] raw = {5, 4, 1, 2, 7, 6, 9, 8, 0, 3};
-    StraightInserSort.sort(raw);
+    ShellsSort.sort(raw);
     System.out.println(Ints.asList(raw));
   }
 }
