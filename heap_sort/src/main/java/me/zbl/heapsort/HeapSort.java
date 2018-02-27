@@ -32,6 +32,11 @@ package me.zbl.heapsort;
  */
 public class HeapSort {
 
+  /**
+   * 排序
+   *
+   * @param raw 待排序数组
+   */
   public static int[] sort(int[] raw) {
     getMaxHeap(raw);
     for (int i = raw.length - 1; i > 0; i--) {
@@ -44,6 +49,11 @@ public class HeapSort {
   }
 
 
+  /**
+   * 将序列排序形成大顶堆
+   *
+   * @param raw 待处理数组
+   */
   private static int[] getMaxHeap(int[] raw) {
     for (int i = raw.length / 2; i > -1; i--) {
       adjust(raw, i, raw.length - 1);
@@ -53,6 +63,7 @@ public class HeapSort {
 
   /**
    * 对树中的某个节点进行调整
+   * 先将堆顶元素值保存，依次对各节点进行调整
    *
    * @param raw    待调整树
    * @param root   调整的位置
