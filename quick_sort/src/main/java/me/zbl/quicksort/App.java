@@ -14,29 +14,19 @@
  * limitations under the License.
  *
  */
-package me.zbl.bubblesort;
+package me.zbl.quicksort;
+
+import com.google.common.primitives.Ints;
 
 /**
- * 冒泡排序
- *
  * @author JamesZBL
  * @date 2018-03-01
  */
-public class BubbleSort {
+public class App {
 
-  public static int[] sort(int[] raw) {
-    int i = raw.length - 1;
-    while (i > 0) {
-      for (int j = 0; j < i; j++) {
-        if (raw[j] > raw[j + 1]) {
-          int tmp = raw[j];
-          raw[j] = raw[j + 1];
-          raw[j + 1] = tmp;
-        }
-      }
-      i--;
-    }
-
-    return raw;
+  public static void main(String[] args) {
+    int[] raw = {5, 4, 1, 2, 7, 6, 9, 8, 0, 3};
+    QuickSort.sort(raw);
+    System.out.println(Ints.asList(raw));
   }
 }
